@@ -1,0 +1,18 @@
+<h2>Players in {{ team.name }}</h2>
+<ul>
+  {% for player in batsmen %}
+    <li>{{ player.player }}</li>
+  {% empty %}
+    <li>No players found in this team.</li>
+  {% endfor %}
+  {% for player in allrounder %}
+  <li>{{ player.player }}</li>
+{% empty %}
+  <li>No allrounder found in this team.</li>
+{% endfor %}
+{% for player in bowlers %}
+<li>{{ player.player }}</li>
+{% empty %}
+<li>No players bowlers in this team.</li>
+{% endfor %}
+</ul>
